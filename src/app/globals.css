@@ -235,20 +235,6 @@ article .code-block pre {
   position: relative;
 }
 
-.roadmap-month::before {
-  content: '';
-  position: absolute;
-  left: 1.25rem;
-  top: 3rem;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-}
-
-.roadmap-month:last-child::before {
-  display: none;
-}
-
 /* Live preview iframe styles */
 .live-preview-frame {
   background: white;
