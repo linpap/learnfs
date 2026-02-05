@@ -19,9 +19,13 @@ export const metadata: Metadata = {
   keywords: ["full-stack", "web development", "JavaScript", "React", "Next.js", "Node.js", "TypeScript", "learn coding", "programming course", "web dev tutorial"],
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
   icons: {
-    icon: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
   openGraph: {
     title: "LearnFS - Full-Stack Web Development Course",
     description: "Master full-stack web development in 6 months with 65 comprehensive lessons. From HTML basics to production deployment.",

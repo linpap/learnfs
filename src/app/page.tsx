@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
+import Footer from '@/components/Footer';
 import { useAuth } from '@/context/AuthContext';
 import { lessons } from '@/data/lessons';
 import { MONTHS } from '@/types/lesson';
@@ -261,23 +262,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Logo size="sm" />
-            </div>
-            <div className="flex items-center gap-6 text-sm">
-              <Link href="/curriculum" className="hover:text-white">Curriculum</Link>
-              <Link href="/practice" className="hover:text-white">Practice</Link>
-              <Link href="/premium" className="hover:text-white">Premium</Link>
-            </div>
-            <p className="text-sm">
-              &copy; {new Date().getFullYear()} LearnFS. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
