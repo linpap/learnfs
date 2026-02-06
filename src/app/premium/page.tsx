@@ -11,14 +11,14 @@ export default function PremiumPage() {
 
   const plans = {
     monthly: {
-      price: 29,
+      price: 599,
       period: 'month',
       savings: null,
     },
     yearly: {
-      price: 199,
+      price: 5500,
       period: 'year',
-      savings: '43% off',
+      savings: '23% off',
     },
   };
 
@@ -194,12 +194,12 @@ export default function PremiumPage() {
             <div className="bg-gradient-to-r from-emerald-500 to-blue-600 p-8 text-white text-center">
               <h2 className="text-2xl font-bold mb-2">Premium Access</h2>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-5xl font-bold">${plans[selectedPlan].price}</span>
+                <span className="text-5xl font-bold">₹{plans[selectedPlan].price}</span>
                 <span className="text-xl opacity-80">/{plans[selectedPlan].period}</span>
               </div>
               {selectedPlan === 'yearly' && (
                 <p className="mt-2 text-sm opacity-80">
-                  That's just ${Math.round(plans.yearly.price / 12)}/month
+                  That's just ₹{Math.round(plans.yearly.price / 12)}/month
                 </p>
               )}
             </div>
