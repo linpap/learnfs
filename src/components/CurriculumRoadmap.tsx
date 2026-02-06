@@ -54,7 +54,7 @@ export default function CurriculumRoadmap({ lessons, userProgress = {}, isPremiu
         return (
           <div
             key={monthInfo.month}
-            className={`roadmap-month rounded-xl border ${isLocked ? 'border-gray-300 dark:border-gray-700' : 'border-gray-200 dark:border-gray-700'} overflow-hidden transition-all duration-300`}
+            className={`month-card rounded-xl border ${isLocked ? 'border-gray-300 dark:border-gray-700' : 'border-gray-200 dark:border-gray-700'} overflow-hidden transition-all duration-300`}
           >
             {/* Month Header */}
             <button

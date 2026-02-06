@@ -231,21 +231,6 @@ article .code-block pre {
 }
 
 
-/* Override the timeline line on roadmap-month - using higher specificity */
-.curriculum-roadmap .roadmap-month::before,
-.roadmap-month::before,
-div.roadmap-month::before {
-  content: none !important;
-  display: none !important;
-  background: transparent !important;
-  background-image: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  position: static !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
 /* Live preview iframe styles */
 .live-preview-frame {
   background: white;
