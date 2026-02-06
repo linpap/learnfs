@@ -42,7 +42,7 @@ export default function CurriculumRoadmap({ lessons, userProgress = {}, isPremiu
   };
 
   return (
-    <div className="curriculum-roadmap space-y-6">
+    <div className="curriculum-roadmap flex flex-col gap-6">
       {MONTHS.map((monthInfo, idx) => {
         const monthLessons = getLessonsByMonth(monthInfo.month);
         const progress = getMonthProgress(monthInfo.month);

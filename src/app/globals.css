@@ -230,36 +230,65 @@ article .code-block pre {
   animation: slideIn 0.3s ease-out forwards;
 }
 
-/* Curriculum roadmap styles - explicitly remove any timeline lines */
-.curriculum-roadmap,
-.curriculum-roadmap *,
-.roadmap-month,
-.roadmap-month * {
-  border-left: none !important;
-  border-right: none !important;
+/* Curriculum roadmap styles - aggressively remove any timeline/vertical lines */
+.curriculum-roadmap {
+  position: relative;
+  background: transparent;
 }
 
 .curriculum-roadmap::before,
-.curriculum-roadmap::after,
-.roadmap-month::before,
-.roadmap-month::after,
-.curriculum-roadmap *::before,
-.curriculum-roadmap *::after {
+.curriculum-roadmap::after {
   content: none !important;
   display: none !important;
+  position: static !important;
   width: 0 !important;
   height: 0 !important;
   border: none !important;
-  background: none !important;
+  background: transparent !important;
+  left: auto !important;
+  top: auto !important;
+  bottom: auto !important;
 }
 
-/* Remove any blue colored vertical elements */
-.curriculum-roadmap [class*="border-blue"],
-.curriculum-roadmap [class*="bg-blue"],
-.roadmap-month [class*="border-blue"],
-.roadmap-month [class*="bg-blue"] {
-  border-left: none !important;
-  border-right: none !important;
+.roadmap-month {
+  position: relative;
+}
+
+.roadmap-month::before,
+.roadmap-month::after {
+  content: none !important;
+  display: none !important;
+  position: static !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  left: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+}
+
+/* Target all child elements pseudo-elements */
+.curriculum-roadmap *::before,
+.curriculum-roadmap *::after,
+.roadmap-month *::before,
+.roadmap-month *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove any vertical lines or borders from all elements */
+.curriculum-roadmap *,
+.roadmap-month * {
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+}
+
+/* Specifically target any potential timeline connector */
+.curriculum-roadmap > *:not(:last-child)::after,
+.curriculum-roadmap > div::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* Live preview iframe styles */
