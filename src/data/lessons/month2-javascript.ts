@@ -2,7 +2,7 @@ import { Lesson } from '@/types/lesson';
 
 export const month2Lessons: Lesson[] = [
   {
-    id: 13,
+    id: 21,
     title: "Arrays & Objects",
     description: "Master JavaScript arrays and objects - the fundamental data structures",
     duration: "55 min",
@@ -223,7 +223,7 @@ const value = data.missing ?? 'default';  // 'default'</pre>
     `,
     questions: [
       {
-        id: "13-1",
+        id: "21-1",
         type: "mcq",
         question: "Which array method would you use to transform each element and return a new array?",
         options: ["forEach", "filter", "map", "reduce"],
@@ -231,7 +231,7 @@ const value = data.missing ?? 'default';  // 'default'</pre>
         explanation: "map() creates a new array by applying a function to each element. forEach() doesn't return anything, filter() only keeps matching elements, and reduce() combines elements into a single value."
       },
       {
-        id: "13-2",
+        id: "21-2",
         type: "mcq",
         question: "What does Object.entries() return?",
         options: [
@@ -244,7 +244,7 @@ const value = data.missing ?? 'default';  // 'default'</pre>
         explanation: "Object.entries() returns an array of [key, value] pairs, making it easy to iterate over object properties. Object.keys() returns keys, Object.values() returns values."
       },
       {
-        id: "13-3",
+        id: "21-3",
         type: "mcq",
         question: "What does arr.splice(1, 2) do?",
         options: [
@@ -257,7 +257,7 @@ const value = data.missing ?? 'default';  // 'default'</pre>
         explanation: "splice(start, deleteCount) removes deleteCount elements starting at index start. It mutates the original array and returns the removed elements."
       },
       {
-        id: "13-4",
+        id: "21-4",
         type: "descriptive",
         question: "Explain the difference between map, filter, and reduce with examples of when you'd use each.",
         keywords: ["map", "transform", "filter", "condition", "reduce", "accumulate", "new array", "single value"],
@@ -266,7 +266,7 @@ const value = data.missing ?? 'default';  // 'default'</pre>
     ]
   },
   {
-    id: 14,
+    id: 22,
     title: "DOM Manipulation",
     description: "Learn to interact with web pages using the Document Object Model",
     duration: "50 min",
@@ -490,7 +490,7 @@ input.addEventListener('change', (e) => {
     `,
     questions: [
       {
-        id: "14-1",
+        id: "22-1",
         type: "mcq",
         question: "What's the difference between querySelector and querySelectorAll?",
         options: [
@@ -503,7 +503,7 @@ input.addEventListener('change', (e) => {
         explanation: "querySelector() returns the first element that matches the selector, or null if none found. querySelectorAll() returns a NodeList of all matching elements."
       },
       {
-        id: "14-2",
+        id: "22-2",
         type: "mcq",
         question: "Which method would you use to safely set text content without HTML interpretation?",
         options: ["innerHTML", "textContent", "outerHTML", "insertHTML"],
@@ -511,7 +511,7 @@ input.addEventListener('change', (e) => {
         explanation: "textContent sets plain text without parsing HTML, making it safe from XSS attacks. innerHTML parses and renders HTML, which can be a security risk with user input."
       },
       {
-        id: "14-3",
+        id: "22-3",
         type: "mcq",
         question: "What does event.preventDefault() do?",
         options: [
@@ -524,7 +524,7 @@ input.addEventListener('change', (e) => {
         explanation: "preventDefault() stops the browser's default behavior (like form submission refreshing the page, or link navigation). stopPropagation() stops event bubbling."
       },
       {
-        id: "14-4",
+        id: "22-4",
         type: "descriptive",
         question: "Explain event delegation and why it's useful for dynamic content.",
         keywords: ["delegation", "parent", "bubbling", "dynamic", "target", "matches", "performance", "single listener"],
@@ -533,7 +533,7 @@ input.addEventListener('change', (e) => {
     ]
   },
   {
-    id: 15,
+    id: 23,
     title: "Asynchronous JavaScript",
     description: "Master promises, async/await, and handling asynchronous operations",
     duration: "60 min",
@@ -782,7 +782,7 @@ async function loadData(setLoading, setData, setError) {
     `,
     questions: [
       {
-        id: "15-1",
+        id: "23-1",
         type: "mcq",
         question: "What does the await keyword do?",
         options: [
@@ -795,7 +795,7 @@ async function loadData(setLoading, setData, setError) {
         explanation: "await pauses the execution of an async function until the promise it's waiting on settles. It then returns the resolved value or throws the rejected error."
       },
       {
-        id: "15-2",
+        id: "23-2",
         type: "mcq",
         question: "What happens if one promise in Promise.all() rejects?",
         options: [
@@ -808,7 +808,7 @@ async function loadData(setLoading, setData, setError) {
         explanation: "Promise.all() fails fast - if any promise rejects, the whole thing rejects. Use Promise.allSettled() if you need all results regardless of individual failures."
       },
       {
-        id: "15-3",
+        id: "23-3",
         type: "mcq",
         question: "Why does this code output '1, 3, 2'? console.log('1'); setTimeout(() => console.log('2'), 0); console.log('3');",
         options: [
@@ -821,7 +821,7 @@ async function loadData(setLoading, setData, setError) {
         explanation: "The event loop processes all synchronous code first. Even with a 0ms timeout, the callback goes to the task queue and only runs after the call stack is empty."
       },
       {
-        id: "15-4",
+        id: "23-4",
         type: "descriptive",
         question: "Explain the difference between using Promise.all() vs awaiting promises sequentially in a loop.",
         keywords: ["parallel", "sequential", "Promise.all", "performance", "concurrent", "loop", "independent", "faster"],
@@ -830,7 +830,7 @@ async function loadData(setLoading, setData, setError) {
     ]
   },
   {
-    id: 16,
+    id: 24,
     title: "ES6+ Features",
     description: "Master modern JavaScript features: destructuring, spread, modules, and more",
     duration: "55 min",
@@ -1066,7 +1066,7 @@ const obj = {
     `,
     questions: [
       {
-        id: "16-1",
+        id: "24-1",
         type: "mcq",
         question: "What does const { name: userName } = user do?",
         options: [
@@ -1079,7 +1079,7 @@ const obj = {
         explanation: "This is destructuring with renaming. It extracts user.name and assigns it to a new variable called userName. The variable 'name' is not created."
       },
       {
-        id: "16-2",
+        id: "24-2",
         type: "mcq",
         question: "What's the difference between spread (...) and rest (...)?",
         options: [
@@ -1092,7 +1092,7 @@ const obj = {
         explanation: "Spread expands an array/object into individual elements. Rest collects multiple elements into an array. Context determines which: function parameters use rest, function calls use spread."
       },
       {
-        id: "16-3",
+        id: "24-3",
         type: "mcq",
         question: "What does ?? (nullish coalescing) return for: 0 ?? 'default'?",
         options: ["'default'", "0", "null", "undefined"],
@@ -1100,7 +1100,7 @@ const obj = {
         explanation: "Nullish coalescing (??) only uses the default for null or undefined, not other falsy values like 0, '', or false. This differs from || which uses default for any falsy value."
       },
       {
-        id: "16-4",
+        id: "24-4",
         type: "descriptive",
         question: "Explain the benefits of ES modules over script tags and when to use dynamic imports.",
         keywords: ["module", "import", "export", "scope", "dependency", "tree shaking", "dynamic", "code splitting", "lazy"],
@@ -1109,7 +1109,7 @@ const obj = {
     ]
   },
   {
-    id: 17,
+    id: 25,
     title: "Error Handling & Debugging",
     description: "Learn to handle errors gracefully and debug JavaScript effectively",
     duration: "45 min",
@@ -1360,7 +1360,7 @@ function sanitizeHTML(str) {
     `,
     questions: [
       {
-        id: "17-1",
+        id: "25-1",
         type: "mcq",
         question: "When does the 'finally' block execute?",
         options: [
@@ -1373,7 +1373,7 @@ function sanitizeHTML(str) {
         explanation: "The finally block always executes, regardless of whether an error occurred or whether it was caught. It's ideal for cleanup operations like closing connections."
       },
       {
-        id: "17-2",
+        id: "25-2",
         type: "mcq",
         question: "What's the purpose of extending the Error class for custom errors?",
         options: [
@@ -1386,7 +1386,7 @@ function sanitizeHTML(str) {
         explanation: "Custom error classes let you add relevant properties (like statusCode) and use instanceof to handle different error types differently. They also maintain proper stack traces."
       },
       {
-        id: "17-3",
+        id: "25-3",
         type: "mcq",
         question: "What does console.trace() do?",
         options: [
@@ -1399,7 +1399,7 @@ function sanitizeHTML(str) {
         explanation: "console.trace() outputs a stack trace to the console, showing the path of function calls that led to that point. It's useful for understanding how code execution reached a certain point."
       },
       {
-        id: "17-4",
+        id: "25-4",
         type: "descriptive",
         question: "Explain the difference between throwing errors in sync vs async code and how to handle each.",
         keywords: ["try", "catch", "throw", "async", "await", "promise", "reject", "unhandled", "stack trace"],
@@ -1408,7 +1408,7 @@ function sanitizeHTML(str) {
     ]
   },
   {
-    id: 18,
+    id: 26,
     title: "Introduction to TypeScript",
     description: "Learn TypeScript basics: types, interfaces, and type annotations",
     duration: "55 min",
@@ -1661,7 +1661,7 @@ const enum HttpMethod {
     `,
     questions: [
       {
-        id: "18-1",
+        id: "26-1",
         type: "mcq",
         question: "What's the difference between 'any' and 'unknown' types?",
         options: [
@@ -1674,7 +1674,7 @@ const enum HttpMethod {
         explanation: "'any' bypasses type checking entirely. 'unknown' is type-safe - you must narrow the type (with typeof, instanceof, etc.) before using the value. Prefer 'unknown' over 'any'."
       },
       {
-        id: "18-2",
+        id: "26-2",
         type: "mcq",
         question: "How do you make an interface property optional?",
         options: [
@@ -1687,7 +1687,7 @@ const enum HttpMethod {
         explanation: "Add a question mark (?) after the property name to make it optional. For example: age?: number means age can be a number or undefined."
       },
       {
-        id: "18-3",
+        id: "26-3",
         type: "mcq",
         question: "What does type Status = 'pending' | 'active' create?",
         options: [
@@ -1700,7 +1700,7 @@ const enum HttpMethod {
         explanation: "This creates a union type where Status can only be the exact strings 'pending' or 'active'. This is called a string literal union type and is useful for constraining values."
       },
       {
-        id: "18-4",
+        id: "26-4",
         type: "descriptive",
         question: "Explain the benefits of TypeScript over plain JavaScript and when you might not need it.",
         keywords: ["type", "error", "compile", "tooling", "autocomplete", "refactor", "documentation", "small project", "prototype"],
@@ -1709,7 +1709,7 @@ const enum HttpMethod {
     ]
   },
   {
-    id: 19,
+    id: 27,
     title: "Advanced TypeScript",
     description: "Master generics, utility types, and advanced TypeScript patterns",
     duration: "60 min",
@@ -1983,7 +1983,7 @@ function process(value: unknown) {
     `,
     questions: [
       {
-        id: "19-1",
+        id: "27-1",
         type: "mcq",
         question: "What does <T extends HasLength> mean in a generic function?",
         options: [
@@ -1996,7 +1996,7 @@ function process(value: unknown) {
         explanation: "Generic constraints with 'extends' mean the type must have at least the properties/methods of the constraint. T can have additional properties but must include everything in HasLength."
       },
       {
-        id: "19-2",
+        id: "27-2",
         type: "mcq",
         question: "What does Partial<User> do?",
         options: [
@@ -2009,7 +2009,7 @@ function process(value: unknown) {
         explanation: "Partial<T> is a utility type that makes all properties of T optional. It's useful for update functions where you only need to provide the fields being updated."
       },
       {
-        id: "19-3",
+        id: "27-3",
         type: "mcq",
         question: "What is a type guard function?",
         options: [
@@ -2022,7 +2022,7 @@ function process(value: unknown) {
         explanation: "Type guards are functions with a return type like 'value is Type'. When they return true, TypeScript narrows the type in the conditional branch. This helps work with union types safely."
       },
       {
-        id: "19-4",
+        id: "27-4",
         type: "descriptive",
         question: "Explain when and why you would use generics instead of 'any' type.",
         keywords: ["generic", "type safety", "reusable", "any", "inference", "constraint", "relationship", "preserve type"],
@@ -2031,7 +2031,7 @@ function process(value: unknown) {
     ]
   },
   {
-    id: 20,
+    id: 28,
     title: "Fetch API & HTTP Methods",
     description: "Learn to make HTTP requests with the Fetch API",
     duration: "50 min",
@@ -2330,7 +2330,7 @@ const newUser = await apiClient.post('/users', { name: 'Alice' });</pre>
     `,
     questions: [
       {
-        id: "20-1",
+        id: "28-1",
         type: "mcq",
         question: "When does a fetch() promise reject?",
         options: [
@@ -2343,7 +2343,7 @@ const newUser = await apiClient.post('/users', { name: 'Alice' });</pre>
         explanation: "Fetch only rejects on network failures, not HTTP errors. A 404 or 500 response still resolves successfully - you must check response.ok or response.status to detect HTTP errors."
       },
       {
-        id: "20-2",
+        id: "28-2",
         type: "mcq",
         question: "What's the difference between PUT and PATCH?",
         options: [
@@ -2356,7 +2356,7 @@ const newUser = await apiClient.post('/users', { name: 'Alice' });</pre>
         explanation: "PUT replaces the entire resource - you must send all fields. PATCH allows partial updates - you only send the fields you want to change. Use PATCH for most updates."
       },
       {
-        id: "20-3",
+        id: "28-3",
         type: "mcq",
         question: "Why shouldn't you set Content-Type when uploading FormData?",
         options: [
@@ -2369,7 +2369,7 @@ const newUser = await apiClient.post('/users', { name: 'Alice' });</pre>
         explanation: "When sending FormData, the browser automatically sets the Content-Type to 'multipart/form-data' with the correct boundary string. Setting it manually would break the request."
       },
       {
-        id: "20-4",
+        id: "28-4",
         type: "descriptive",
         question: "Explain how to handle different types of errors when using fetch (network vs HTTP errors).",
         keywords: ["network", "HTTP", "ok", "status", "reject", "catch", "TypeError", "response", "error handling"],
@@ -2378,7 +2378,7 @@ const newUser = await apiClient.post('/users', { name: 'Alice' });</pre>
     ]
   },
   {
-    id: 21,
+    id: 29,
     title: "Working with JSON & REST APIs",
     description: "Master JSON data format and RESTful API design principles",
     duration: "55 min",
@@ -2696,7 +2696,7 @@ const rateLimiter = {
     `,
     questions: [
       {
-        id: "21-1",
+        id: "29-1",
         type: "mcq",
         question: "What happens if you try to JSON.stringify an object with a function property?",
         options: [
@@ -2709,7 +2709,7 @@ const rateLimiter = {
         explanation: "JSON.stringify silently omits functions, undefined values, and symbols. Only JSON-compatible values (strings, numbers, booleans, null, arrays, objects) are included in the output."
       },
       {
-        id: "21-2",
+        id: "29-2",
         type: "mcq",
         question: "In REST, what HTTP method should be used to partially update a resource?",
         options: ["POST", "PUT", "PATCH", "UPDATE"],
@@ -2717,7 +2717,7 @@ const rateLimiter = {
         explanation: "PATCH is used for partial updates - you only send the fields you want to change. PUT replaces the entire resource and requires sending all fields."
       },
       {
-        id: "21-3",
+        id: "29-3",
         type: "mcq",
         question: "What is the purpose of the 'reviver' parameter in JSON.parse?",
         options: [
@@ -2730,11 +2730,2080 @@ const rateLimiter = {
         explanation: "The reviver is a function called for each key-value pair during parsing. It lets you transform values, like converting date strings back to Date objects."
       },
       {
-        id: "21-4",
+        id: "29-4",
         type: "descriptive",
         question: "Explain RESTful URL design principles and provide examples for a blog API with posts and comments.",
         keywords: ["REST", "resource", "URL", "HTTP method", "GET", "POST", "PUT", "DELETE", "nested", "collection", "endpoint"],
         explanation: "REST uses nouns for resources (not verbs) and HTTP methods for actions. For a blog: GET /posts (list), GET /posts/1 (single), POST /posts (create), PUT /posts/1 (replace), PATCH /posts/1 (update), DELETE /posts/1 (delete). Comments: GET /posts/1/comments, POST /posts/1/comments."
+      }
+    ]
+  },
+  {
+    id: 30,
+    title: "Events & Event Handling",
+    description: "Master DOM events, event delegation, and custom events in JavaScript",
+    duration: "45 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 3,
+    category: "JavaScript",
+    content: `
+      <h2>Events & Event Handling</h2>
+      <p>Events are actions or occurrences that happen in the browser. Understanding events is crucial for creating interactive web applications.</p>
+
+      <h3>Event Basics</h3>
+      <div class="code-block">
+        <pre>// Adding event listeners
+const button = document.querySelector('button');
+
+button.addEventListener('click', function(event) {
+  console.log('Button clicked!');
+  console.log('Event target:', event.target);
+});
+
+// Arrow function syntax
+button.addEventListener('click', (e) => {
+  console.log('Clicked!', e);
+});
+
+// Remove event listener (need named function)
+function handleClick(e) {
+  console.log('Clicked!');
+}
+button.addEventListener('click', handleClick);
+button.removeEventListener('click', handleClick);</pre>
+      </div>
+
+      <h3>Common Event Types</h3>
+      <div class="code-block">
+        <pre>// Mouse events
+element.addEventListener('click', fn);
+element.addEventListener('dblclick', fn);
+element.addEventListener('mousedown', fn);
+element.addEventListener('mouseup', fn);
+element.addEventListener('mousemove', fn);
+element.addEventListener('mouseenter', fn);
+element.addEventListener('mouseleave', fn);
+
+// Keyboard events
+document.addEventListener('keydown', (e) => {
+  console.log('Key:', e.key);
+  console.log('Code:', e.code);
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+    saveDocument();
+  }
+});
+
+// Form events
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+});
+input.addEventListener('input', fn);   // Every keystroke
+input.addEventListener('change', fn);  // On blur after change
+input.addEventListener('focus', fn);
+input.addEventListener('blur', fn);
+
+// Window events
+window.addEventListener('load', fn);
+window.addEventListener('resize', fn);
+window.addEventListener('scroll', fn);</pre>
+      </div>
+
+      <h3>Event Object</h3>
+      <div class="code-block">
+        <pre>element.addEventListener('click', (event) => {
+  // Event properties
+  event.target;          // Element that triggered event
+  event.currentTarget;   // Element listener is attached to
+  event.type;            // Event type ('click', 'keydown', etc.)
+  event.timeStamp;       // When event occurred
+
+  // Mouse event properties
+  event.clientX;         // X relative to viewport
+  event.clientY;         // Y relative to viewport
+  event.pageX;           // X relative to document
+  event.pageY;           // Y relative to document
+  event.button;          // Which mouse button (0=left, 1=middle, 2=right)
+
+  // Keyboard event properties
+  event.key;             // Character or key name
+  event.code;            // Physical key code
+  event.altKey;          // Alt key pressed?
+  event.ctrlKey;         // Ctrl key pressed?
+  event.shiftKey;        // Shift key pressed?
+  event.metaKey;         // Cmd/Windows key pressed?
+
+  // Methods
+  event.preventDefault();  // Prevent default behavior
+  event.stopPropagation(); // Stop event bubbling
+});</pre>
+      </div>
+
+      <h3>Event Delegation</h3>
+      <div class="code-block">
+        <pre>// Instead of adding listeners to each item...
+// Add one listener to the parent
+
+const list = document.querySelector('.todo-list');
+
+list.addEventListener('click', (e) => {
+  // Check if clicked element matches our target
+  if (e.target.matches('.delete-btn')) {
+    const item = e.target.closest('.todo-item');
+    item.remove();
+  }
+
+  if (e.target.matches('.toggle-btn')) {
+    e.target.closest('.todo-item').classList.toggle('completed');
+  }
+});
+
+// Benefits:
+// - Works for dynamically added elements
+// - Better performance (fewer listeners)
+// - Less memory usage</pre>
+      </div>
+
+      <h3>Custom Events</h3>
+      <div class="code-block">
+        <pre>// Create custom event
+const event = new CustomEvent('userLoggedIn', {
+  detail: { userId: 123, username: 'alice' },
+  bubbles: true,
+  cancelable: true
+});
+
+// Dispatch event
+document.dispatchEvent(event);
+
+// Listen for custom event
+document.addEventListener('userLoggedIn', (e) => {
+  console.log('User logged in:', e.detail.username);
+});
+
+// Practical example: Component communication
+class ShoppingCart {
+  addItem(item) {
+    this.items.push(item);
+    document.dispatchEvent(new CustomEvent('cartUpdated', {
+      detail: { items: this.items, total: this.getTotal() }
+    }));
+  }
+}
+
+// UI updates on cart change
+document.addEventListener('cartUpdated', (e) => {
+  updateCartBadge(e.detail.items.length);
+  updateCartTotal(e.detail.total);
+});</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "30-1",
+        type: "mcq",
+        question: "What is the difference between event.target and event.currentTarget?",
+        options: [
+          "They are the same thing",
+          "target is the clicked element, currentTarget is where the listener is attached",
+          "currentTarget is the clicked element, target is where the listener is attached",
+          "target is for mouse events, currentTarget is for keyboard events"
+        ],
+        correctAnswer: "target is the clicked element, currentTarget is where the listener is attached",
+        explanation: "event.target is the actual element that was clicked (the source of the event). event.currentTarget is always the element that the event listener is attached to. They differ when using event delegation."
+      },
+      {
+        id: "30-2",
+        type: "mcq",
+        question: "What is the main benefit of event delegation?",
+        options: [
+          "Events fire faster",
+          "Works for dynamically added elements and uses less memory",
+          "Allows multiple event types",
+          "Prevents event bubbling"
+        ],
+        correctAnswer: "Works for dynamically added elements and uses less memory",
+        explanation: "Event delegation uses a single listener on a parent element instead of many listeners on children. It works for elements added dynamically and reduces memory usage."
+      },
+      {
+        id: "30-3",
+        type: "descriptive",
+        question: "Explain the difference between preventDefault() and stopPropagation().",
+        keywords: ["preventDefault", "stopPropagation", "default", "behavior", "bubbling", "propagation", "parent"],
+        explanation: "preventDefault() stops the browser's default action (form submission, link navigation). stopPropagation() prevents the event from bubbling up to parent elements. Use preventDefault for form handling, stopPropagation when you want to handle an event without triggering parent listeners."
+      }
+    ]
+  },
+  {
+    id: 31,
+    title: "Closures, Hoisting & Execution Context",
+    description: "Understand how JavaScript executes code under the hood",
+    duration: "50 min",
+    difficulty: "Advanced",
+    month: 2,
+    week: 3,
+    category: "JavaScript",
+    content: `
+      <h2>Closures, Hoisting and Execution Context</h2>
+      <p>Understanding these concepts is key to mastering JavaScript and avoiding common bugs.</p>
+
+      <h3>Execution Context</h3>
+      <div class="code-block">
+        <pre>// Every time code runs, an execution context is created
+// Global Execution Context - created when script starts
+// Function Execution Context - created when function is called
+
+// Each context has:
+// 1. Variable Environment (variables, functions)
+// 2. Scope Chain (access to outer scopes)
+// 3. 'this' binding
+
+function outer() {
+  const a = 1;
+
+  function inner() {
+    const b = 2;
+    console.log(a + b); // Can access 'a' from outer scope
+  }
+
+  inner();
+}
+
+outer();
+
+// Call Stack:
+// 1. Global Context (created first)
+// 2. outer() Context (pushed when called)
+// 3. inner() Context (pushed when called)
+// 4. inner() Context (popped when done)
+// 5. outer() Context (popped when done)</pre>
+      </div>
+
+      <h3>Hoisting</h3>
+      <div class="code-block">
+        <pre>// Hoisting moves declarations to top of scope
+
+// Variable hoisting with var
+console.log(x); // undefined (not error!)
+var x = 5;
+// Interpreted as:
+// var x;
+// console.log(x);
+// x = 5;
+
+// let and const are hoisted but not initialized
+console.log(y); // ReferenceError: Cannot access before initialization
+let y = 10;     // "Temporal Dead Zone"
+
+// Function declarations are fully hoisted
+sayHello(); // Works!
+function sayHello() {
+  console.log('Hello!');
+}
+
+// Function expressions are NOT hoisted
+sayBye(); // TypeError: sayBye is not a function
+var sayBye = function() {
+  console.log('Bye!');
+};
+
+// Arrow functions behave like function expressions
+greet(); // TypeError
+const greet = () => console.log('Hi');</pre>
+      </div>
+
+      <h3>Closures</h3>
+      <div class="code-block">
+        <pre>// A closure is a function that remembers its outer scope
+function createCounter() {
+  let count = 0; // Private variable
+
+  return {
+    increment() {
+      count++;
+      return count;
+    },
+    decrement() {
+      count--;
+      return count;
+    },
+    getCount() {
+      return count;
+    }
+  };
+}
+
+const counter = createCounter();
+counter.increment(); // 1
+counter.increment(); // 2
+counter.getCount();  // 2
+// count is not accessible directly!
+
+// Practical example: Private data
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+
+  return {
+    deposit(amount) {
+      if (amount > 0) {
+        balance += amount;
+        return balance;
+      }
+    },
+    withdraw(amount) {
+      if (amount > 0 && amount <= balance) {
+        balance -= amount;
+        return balance;
+      }
+      return 'Insufficient funds';
+    },
+    getBalance() {
+      return balance;
+    }
+  };
+}
+
+const account = createBankAccount(100);
+account.deposit(50);   // 150
+account.withdraw(30);  // 120
+account.balance;       // undefined (private!)</pre>
+      </div>
+
+      <h3>Common Closure Gotchas</h3>
+      <div class="code-block">
+        <pre>// Loop with var - common bug
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+// Prints: 3, 3, 3 (not 0, 1, 2!)
+// All callbacks share the same 'i'
+
+// Fix 1: Use let (block scoped)
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+// Prints: 0, 1, 2
+
+// Fix 2: Create closure with IIFE
+for (var i = 0; i < 3; i++) {
+  ((j) => {
+    setTimeout(() => console.log(j), 100);
+  })(i);
+}
+// Prints: 0, 1, 2</pre>
+      </div>
+
+      <h3>The 'this' Keyword</h3>
+      <div class="code-block">
+        <pre>// 'this' depends on HOW a function is called
+
+// 1. Global context
+console.log(this); // window (browser) or global (Node)
+
+// 2. Object method
+const obj = {
+  name: 'Alice',
+  greet() {
+    console.log(this.name); // 'Alice'
+  }
+};
+
+// 3. Arrow functions - inherit 'this' from parent
+const obj2 = {
+  name: 'Bob',
+  greet: () => {
+    console.log(this.name); // undefined (inherits global 'this')
+  },
+  delayedGreet() {
+    setTimeout(() => {
+      console.log(this.name); // 'Bob' (arrow inherits from delayedGreet)
+    }, 100);
+  }
+};
+
+// 4. Explicit binding
+function greet() {
+  console.log(this.name);
+}
+greet.call({ name: 'Carol' });   // 'Carol'
+greet.apply({ name: 'Dave' });   // 'Dave'
+const boundGreet = greet.bind({ name: 'Eve' });
+boundGreet(); // 'Eve'
+
+// 5. Constructor (new keyword)
+function Person(name) {
+  this.name = name; // 'this' is the new object
+}
+const person = new Person('Frank'); // { name: 'Frank' }</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "31-1",
+        type: "mcq",
+        question: "What is a closure?",
+        options: [
+          "A way to close a function",
+          "A function that has access to variables from its outer scope even after the outer function has returned",
+          "A method to prevent variable leaks",
+          "A type of loop"
+        ],
+        correctAnswer: "A function that has access to variables from its outer scope even after the outer function has returned",
+        explanation: "A closure is created when a function 'remembers' variables from its lexical scope. The inner function maintains a reference to the outer scope's variables even after the outer function finishes."
+      },
+      {
+        id: "31-2",
+        type: "mcq",
+        question: "Why does 'let' fix the loop/setTimeout problem that occurs with 'var'?",
+        options: [
+          "let is faster",
+          "let creates a new variable for each iteration (block scoped)",
+          "let prevents hoisting",
+          "let is asynchronous"
+        ],
+        correctAnswer: "let creates a new variable for each iteration (block scoped)",
+        explanation: "var is function-scoped so there's only one 'i' shared by all callbacks. let is block-scoped, creating a new 'i' for each loop iteration. Each callback closes over its own 'i'."
+      },
+      {
+        id: "31-3",
+        type: "descriptive",
+        question: "Explain the Temporal Dead Zone (TDZ) and when it occurs.",
+        keywords: ["temporal dead zone", "TDZ", "let", "const", "hoisted", "initialized", "ReferenceError", "declaration"],
+        explanation: "The TDZ is the time between entering a scope and the variable's declaration being reached. let/const are hoisted but not initialized, so accessing them before declaration throws ReferenceError. var is initialized with undefined."
+      }
+    ]
+  },
+  {
+    id: 32,
+    title: "Classes & Object-Oriented JavaScript",
+    description: "Learn ES6 classes, inheritance, and OOP patterns in JavaScript",
+    duration: "50 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 3,
+    category: "JavaScript",
+    content: `
+      <h2>Classes & Object-Oriented JavaScript</h2>
+      <p>ES6 classes provide a cleaner syntax for creating objects and implementing inheritance.</p>
+
+      <h3>Class Basics</h3>
+      <div class="code-block">
+        <pre>class Person {
+  // Constructor - called when creating new instance
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Instance method
+  greet() {
+    return \\\`Hello, I'm \\\${this.name}\\\`;
+  }
+
+  // Getter
+  get birthYear() {
+    return new Date().getFullYear() - this.age;
+  }
+
+  // Setter
+  set birthYear(year) {
+    this.age = new Date().getFullYear() - year;
+  }
+
+  // Static method (called on class, not instance)
+  static createAnonymous() {
+    return new Person('Anonymous', 0);
+  }
+}
+
+const alice = new Person('Alice', 30);
+alice.greet();        // "Hello, I'm Alice"
+alice.birthYear;      // 1994 (if current year is 2024)
+alice.birthYear = 1990;
+alice.age;            // 34
+
+const anon = Person.createAnonymous();</pre>
+      </div>
+
+      <h3>Inheritance</h3>
+      <div class="code-block">
+        <pre>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    return \\\`\\\${this.name} makes a sound\\\`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);  // Call parent constructor
+    this.breed = breed;
+  }
+
+  // Override parent method
+  speak() {
+    return \\\`\\\${this.name} barks!\\\`;
+  }
+
+  // New method
+  fetch() {
+    return \\\`\\\${this.name} fetches the ball\\\`;
+  }
+}
+
+class Cat extends Animal {
+  speak() {
+    return \\\`\\\${this.name} meows!\\\`;
+  }
+}
+
+const dog = new Dog('Rex', 'German Shepherd');
+dog.speak();  // "Rex barks!"
+dog.fetch();  // "Rex fetches the ball"
+
+const cat = new Cat('Whiskers');
+cat.speak();  // "Whiskers meows!"</pre>
+      </div>
+
+      <h3>Private Fields & Methods</h3>
+      <div class="code-block">
+        <pre>class BankAccount {
+  // Private fields (start with #)
+  #balance = 0;
+  #transactions = [];
+
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+    this.#logTransaction('Initial deposit', initialBalance);
+  }
+
+  // Private method
+  #logTransaction(type, amount) {
+    this.#transactions.push({
+      type,
+      amount,
+      date: new Date(),
+      balance: this.#balance
+    });
+  }
+
+  deposit(amount) {
+    if (amount > 0) {
+      this.#balance += amount;
+      this.#logTransaction('Deposit', amount);
+    }
+  }
+
+  withdraw(amount) {
+    if (amount > 0 && amount <= this.#balance) {
+      this.#balance -= amount;
+      this.#logTransaction('Withdrawal', -amount);
+      return amount;
+    }
+    throw new Error('Insufficient funds');
+  }
+
+  get balance() {
+    return this.#balance;
+  }
+
+  getStatement() {
+    return [...this.#transactions];  // Return copy
+  }
+}
+
+const account = new BankAccount(100);
+account.deposit(50);
+account.balance;          // 150
+// account.#balance;      // SyntaxError: Private field
+// account.#transactions; // SyntaxError: Private field</pre>
+      </div>
+
+      <h3>Static Properties & Methods</h3>
+      <div class="code-block">
+        <pre>class MathUtils {
+  static PI = 3.14159;
+  static E = 2.71828;
+
+  static square(x) {
+    return x * x;
+  }
+
+  static cube(x) {
+    return x * x * x;
+  }
+
+  static circleArea(radius) {
+    return MathUtils.PI * MathUtils.square(radius);
+  }
+}
+
+// Use without creating instance
+MathUtils.PI;           // 3.14159
+MathUtils.square(5);    // 25
+MathUtils.circleArea(10); // 314.159
+
+// Common pattern: Factory methods
+class User {
+  constructor(name, role) {
+    this.name = name;
+    this.role = role;
+  }
+
+  static createAdmin(name) {
+    return new User(name, 'admin');
+  }
+
+  static createGuest() {
+    return new User('Guest', 'guest');
+  }
+}
+
+const admin = User.createAdmin('Alice');
+const guest = User.createGuest();</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "32-1",
+        type: "mcq",
+        question: "What does the 'super' keyword do in a child class constructor?",
+        options: [
+          "Creates a super powerful object",
+          "Calls the parent class constructor",
+          "Makes the class faster",
+          "Defines a static method"
+        ],
+        correctAnswer: "Calls the parent class constructor",
+        explanation: "super() calls the parent class constructor. It must be called before using 'this' in a child class constructor. You can also use super.method() to call parent methods."
+      },
+      {
+        id: "32-2",
+        type: "mcq",
+        question: "How do you define a private field in a JavaScript class?",
+        options: [
+          "Using the 'private' keyword",
+          "Using underscore prefix (_field)",
+          "Using hash prefix (#field)",
+          "Using closures only"
+        ],
+        correctAnswer: "Using hash prefix (#field)",
+        explanation: "Private fields in JavaScript use the # prefix. They are truly private and cannot be accessed outside the class. The underscore convention is just a naming hint, not enforced."
+      },
+      {
+        id: "32-3",
+        type: "descriptive",
+        question: "Explain the difference between instance methods and static methods with examples.",
+        keywords: ["instance", "static", "this", "class", "object", "call", "new"],
+        explanation: "Instance methods are called on objects created with 'new' and have access to 'this'. Static methods are called on the class itself (Math.random()) and don't have 'this'. Use static for utility functions that don't need instance data."
+      }
+    ]
+  },
+  {
+    id: 33,
+    title: "JavaScript Modules",
+    description: "Organize code with ES modules, imports, and exports",
+    duration: "40 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>JavaScript Modules</h2>
+      <p>Modules help organize code into reusable, maintainable pieces with clear dependencies.</p>
+
+      <h3>Named Exports</h3>
+      <div class="code-block">
+        <pre>// math.js - Named exports
+export const PI = 3.14159;
+
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+
+export class Calculator {
+  add(a, b) { return a + b; }
+}
+
+// Or export at the end
+const multiply = (a, b) => a * b;
+const divide = (a, b) => a / b;
+export { multiply, divide };</pre>
+      </div>
+
+      <h3>Named Imports</h3>
+      <div class="code-block">
+        <pre>// Import specific exports
+import { add, subtract, PI } from './math.js';
+
+console.log(add(2, 3));  // 5
+console.log(PI);         // 3.14159
+
+// Rename imports
+import { add as sum, subtract as minus } from './math.js';
+sum(2, 3);  // 5
+
+// Import all as namespace
+import * as math from './math.js';
+math.add(2, 3);
+math.PI;
+math.Calculator;</pre>
+      </div>
+
+      <h3>Default Exports</h3>
+      <div class="code-block">
+        <pre>// user.js - Default export
+export default class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// Or
+class User { ... }
+export default User;
+
+// Or for functions
+export default function greet(name) {
+  return \\\`Hello, \\\${name}\\\`;
+}
+
+// Importing default exports
+import User from './user.js';  // No braces!
+import MyUser from './user.js';  // Can use any name
+
+// Mixed: default + named
+export default class User { }
+export const createUser = (name) => new User(name);
+
+import User, { createUser } from './user.js';</pre>
+      </div>
+
+      <h3>Re-exporting</h3>
+      <div class="code-block">
+        <pre>// index.js - Barrel file
+export { add, subtract } from './math.js';
+export { default as User } from './user.js';
+export * from './utils.js';  // All named exports
+
+// Now consumers can import from one place
+import { add, User } from './lib/index.js';
+// Or
+import { add, User } from './lib';  // With bundler</pre>
+      </div>
+
+      <h3>Dynamic Imports</h3>
+      <div class="code-block">
+        <pre>// Load module on demand (returns Promise)
+async function loadHeavyModule() {
+  const module = await import('./heavy-calculations.js');
+  return module.calculate(data);
+}
+
+// Conditional loading
+if (user.isAdmin) {
+  const adminTools = await import('./admin-tools.js');
+  adminTools.init();
+}
+
+// Lazy loading components
+button.addEventListener('click', async () => {
+  const { Modal } = await import('./modal.js');
+  const modal = new Modal();
+  modal.open();
+});
+
+// With error handling
+try {
+  const module = await import('./optional-feature.js');
+  module.init();
+} catch (error) {
+  console.log('Optional feature not available');
+}</pre>
+      </div>
+
+      <h3>Module Patterns</h3>
+      <div class="code-block">
+        <pre>// Singleton pattern
+// config.js
+class Config {
+  constructor() {
+    this.apiUrl = 'https://api.example.com';
+    this.timeout = 5000;
+  }
+}
+
+export default new Config();  // Single instance exported
+
+// Usage - same instance everywhere
+import config from './config.js';
+config.apiUrl;  // Same object in all files
+
+// Factory pattern
+// logger.js
+function createLogger(prefix) {
+  return {
+    log: (msg) => console.log(\\\`[\\\${prefix}] \\\${msg}\\\`),
+    error: (msg) => console.error(\\\`[\\\${prefix}] ERROR: \\\${msg}\\\`)
+  };
+}
+
+export default createLogger;
+
+// Usage
+import createLogger from './logger.js';
+const apiLogger = createLogger('API');
+const dbLogger = createLogger('DB');
+apiLogger.log('Request received');
+dbLogger.error('Connection failed');</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "33-1",
+        type: "mcq",
+        question: "What is the difference between named and default exports?",
+        options: [
+          "Named exports are faster",
+          "You can have multiple named exports but only one default export per file",
+          "Default exports must be functions",
+          "Named exports can only be variables"
+        ],
+        correctAnswer: "You can have multiple named exports but only one default export per file",
+        explanation: "A module can have many named exports but only one default export. Named exports use braces when importing { name }, default exports don't and can be renamed freely."
+      },
+      {
+        id: "33-2",
+        type: "mcq",
+        question: "When would you use dynamic imports?",
+        options: [
+          "Always, they're better than static imports",
+          "For code splitting and loading modules on demand",
+          "Only for default exports",
+          "When you don't know the module name"
+        ],
+        correctAnswer: "For code splitting and loading modules on demand",
+        explanation: "Dynamic imports (import()) load modules at runtime, enabling code splitting, lazy loading, and conditional loading. They return a Promise and help reduce initial bundle size."
+      },
+      {
+        id: "33-3",
+        type: "descriptive",
+        question: "Explain what a barrel file is and why it's useful.",
+        keywords: ["barrel", "index", "re-export", "import", "organize", "centralize", "api"],
+        explanation: "A barrel file (usually index.js) re-exports from multiple modules, providing a single import point. Instead of importing from many files, consumers import from one place. It simplifies imports and lets you reorganize internal structure without breaking external imports."
+      }
+    ]
+  },
+  {
+    id: 34,
+    title: "Web Storage APIs",
+    description: "Store data in the browser with localStorage, sessionStorage, and cookies",
+    duration: "40 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>Web Storage APIs</h2>
+      <p>Browser storage allows you to persist data on the client side. Each method has different use cases.</p>
+
+      <h3>localStorage</h3>
+      <div class="code-block">
+        <pre>// localStorage persists until explicitly deleted
+
+// Set item
+localStorage.setItem('username', 'alice');
+
+// Get item
+const username = localStorage.getItem('username'); // 'alice'
+
+// Remove item
+localStorage.removeItem('username');
+
+// Clear all
+localStorage.clear();
+
+// Check length
+localStorage.length; // Number of items
+
+// Get key by index
+localStorage.key(0); // First key name
+
+// Storing objects (must stringify)
+const user = { name: 'Alice', age: 30 };
+localStorage.setItem('user', JSON.stringify(user));
+
+// Retrieving objects
+const savedUser = JSON.parse(localStorage.getItem('user'));
+
+// Safe retrieval with fallback
+function getFromStorage(key, defaultValue) {
+  try {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : defaultValue;
+  } catch {
+    return defaultValue;
+  }
+}
+
+const settings = getFromStorage('settings', { theme: 'light' });</pre>
+      </div>
+
+      <h3>sessionStorage</h3>
+      <div class="code-block">
+        <pre>// sessionStorage cleared when tab/browser closes
+// Same API as localStorage
+
+sessionStorage.setItem('tempData', 'temporary');
+sessionStorage.getItem('tempData');
+
+// Use cases:
+// - Form data during multi-step wizard
+// - Shopping cart before checkout
+// - Temporary UI state
+// - One-time notifications
+
+// Multi-step form example
+function saveFormStep(step, data) {
+  const formData = JSON.parse(sessionStorage.getItem('formWizard') || '{}');
+  formData[step] = data;
+  sessionStorage.setItem('formWizard', JSON.stringify(formData));
+}
+
+function getFormData() {
+  return JSON.parse(sessionStorage.getItem('formWizard') || '{}');
+}
+
+function clearFormData() {
+  sessionStorage.removeItem('formWizard');
+}</pre>
+      </div>
+
+      <h3>Storage Events</h3>
+      <div class="code-block">
+        <pre>// Listen for storage changes (from other tabs)
+window.addEventListener('storage', (event) => {
+  console.log('Key changed:', event.key);
+  console.log('Old value:', event.oldValue);
+  console.log('New value:', event.newValue);
+  console.log('URL:', event.url);
+  console.log('Storage area:', event.storageArea);
+});
+
+// Use case: Sync logout across tabs
+window.addEventListener('storage', (e) => {
+  if (e.key === 'auth_token' && e.newValue === null) {
+    // Token was removed in another tab
+    window.location.href = '/login';
+  }
+});</pre>
+      </div>
+
+      <h3>Cookies with JavaScript</h3>
+      <div class="code-block">
+        <pre>// Set cookie
+document.cookie = 'name=value';
+document.cookie = 'username=alice; expires=Fri, 31 Dec 2024 23:59:59 GMT';
+document.cookie = 'theme=dark; max-age=31536000'; // 1 year in seconds
+document.cookie = 'session=abc123; path=/; secure; samesite=strict';
+
+// Read cookies (returns all as single string)
+document.cookie; // "username=alice; theme=dark; session=abc123"
+
+// Parse cookies helper
+function getCookie(name) {
+  const cookies = document.cookie.split('; ');
+  const cookie = cookies.find(c => c.startsWith(name + '='));
+  return cookie ? cookie.split('=')[1] : null;
+}
+
+getCookie('username'); // 'alice'
+
+// Delete cookie (set expired date)
+document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+
+// Cookie utility class
+const Cookies = {
+  set(name, value, days = 7) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = \\\`\\\${name}=\\\${encodeURIComponent(value)}; expires=\\\${expires}; path=/\\\`;
+  },
+  get(name) {
+    const value = document.cookie.match('(^|;)\\\\s*' + name + '\\\\s*=\\\\s*([^;]+)');
+    return value ? decodeURIComponent(value.pop()) : null;
+  },
+  delete(name) {
+    this.set(name, '', -1);
+  }
+};</pre>
+      </div>
+
+      <h3>Comparison & Best Practices</h3>
+      <div class="code-block">
+        <pre>// localStorage:
+// - Capacity: ~5-10MB
+// - Persists forever
+// - Use for: user preferences, cached data
+
+// sessionStorage:
+// - Capacity: ~5-10MB
+// - Cleared on tab close
+// - Use for: temporary state, form wizards
+
+// Cookies:
+// - Capacity: ~4KB
+// - Sent with every request
+// - Use for: authentication, server-side needs
+
+// Security considerations:
+// - Never store sensitive data (passwords, tokens in localStorage)
+// - localStorage is vulnerable to XSS attacks
+// - Use httpOnly cookies for auth tokens (not accessible via JS)
+// - Always validate/sanitize stored data on retrieval
+
+// Storage wrapper with error handling
+const storage = {
+  get(key) {
+    try {
+      return JSON.parse(localStorage.getItem(key));
+    } catch {
+      return null;
+    }
+  },
+  set(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        console.error('Storage quota exceeded');
+      }
+      return false;
+    }
+  },
+  remove(key) {
+    localStorage.removeItem(key);
+  }
+};</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "34-1",
+        type: "mcq",
+        question: "What is the main difference between localStorage and sessionStorage?",
+        options: [
+          "localStorage is faster",
+          "sessionStorage has more capacity",
+          "localStorage persists after browser close, sessionStorage doesn't",
+          "sessionStorage works across tabs"
+        ],
+        correctAnswer: "localStorage persists after browser close, sessionStorage doesn't",
+        explanation: "localStorage data persists indefinitely until explicitly deleted. sessionStorage is cleared when the browser tab or window is closed. Both have the same API and similar capacity limits."
+      },
+      {
+        id: "34-2",
+        type: "mcq",
+        question: "Why must you use JSON.stringify when storing objects in localStorage?",
+        options: [
+          "To make it faster",
+          "localStorage only stores strings",
+          "To encrypt the data",
+          "It's optional but recommended"
+        ],
+        correctAnswer: "localStorage only stores strings",
+        explanation: "localStorage only stores string values. If you store an object directly, it becomes '[object Object]'. Use JSON.stringify to convert objects to strings, and JSON.parse to convert back."
+      },
+      {
+        id: "34-3",
+        type: "descriptive",
+        question: "When would you use cookies instead of localStorage? What are the security considerations?",
+        keywords: ["cookies", "localStorage", "server", "httpOnly", "secure", "authentication", "XSS", "sent with request"],
+        explanation: "Use cookies when data needs to be sent to the server automatically (authentication tokens). Cookies can be httpOnly (not accessible to JavaScript, preventing XSS attacks). localStorage is vulnerable to XSS. Never store sensitive data in localStorage."
+      }
+    ]
+  },
+  {
+    id: 35,
+    title: "Regular Expressions",
+    description: "Master pattern matching with JavaScript regular expressions",
+    duration: "45 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>Regular Expressions</h2>
+      <p>Regular expressions (regex) are patterns for matching text. They're powerful for validation, search, and text manipulation.</p>
+
+      <h3>Creating Regular Expressions</h3>
+      <div class="code-block">
+        <pre>// Literal notation (preferred)
+const regex = /pattern/flags;
+
+// Constructor (for dynamic patterns)
+const regex = new RegExp('pattern', 'flags');
+const search = 'hello';
+const dynamicRegex = new RegExp(search, 'i');</pre>
+      </div>
+
+      <h3>Basic Patterns</h3>
+      <div class="code-block">
+        <pre>// Literal characters
+/hello/.test('hello world');  // true
+
+// Special characters (need escaping)
+/\\./.test('file.txt');  // Match literal dot
+/\\$/.test('$100');      // Match literal $
+
+// Character classes
+/[aeiou]/.test('hello');  // Match any vowel
+/[0-9]/.test('abc123');   // Match any digit
+/[a-zA-Z]/.test('Hello'); // Match any letter
+
+// Negated character classes
+/[^0-9]/.test('abc');     // Match non-digit
+
+// Shorthand character classes
+/\\d/.test('123');         // Digit [0-9]
+/\\D/.test('abc');         // Non-digit [^0-9]
+/\\w/.test('hello_123');   // Word char [a-zA-Z0-9_]
+/\\W/.test('@#$');         // Non-word char
+/\\s/.test(' \\t\\n');       // Whitespace
+/\\S/.test('abc');         // Non-whitespace
+
+// Any character (except newline)
+/.at/.test('cat');        // Matches cat, bat, hat, etc.</pre>
+      </div>
+
+      <h3>Quantifiers</h3>
+      <div class="code-block">
+        <pre>// Specific counts
+/a{3}/.test('aaa');       // Exactly 3
+/a{2,4}/.test('aaaa');    // 2 to 4
+/a{2,}/.test('aaaaa');    // 2 or more
+
+// Common quantifiers
+/a*/.test('');            // 0 or more
+/a+/.test('a');           // 1 or more
+/a?/.test('');            // 0 or 1 (optional)
+
+// Greedy vs Lazy
+/a+/.exec('aaaa')[0];     // 'aaaa' (greedy - match most)
+/a+?/.exec('aaaa')[0];    // 'a' (lazy - match least)</pre>
+      </div>
+
+      <h3>Anchors & Boundaries</h3>
+      <div class="code-block">
+        <pre>// Start and end
+/^hello/.test('hello world');  // Starts with 'hello'
+/world$/.test('hello world');  // Ends with 'world'
+/^hello$/.test('hello');       // Exact match
+
+// Word boundaries
+/\\bcat\\b/.test('the cat sat');   // Matches 'cat' as whole word
+/\\bcat\\b/.test('category');      // false - not whole word</pre>
+      </div>
+
+      <h3>Groups & Alternation</h3>
+      <div class="code-block">
+        <pre>// Capturing groups
+const match = /(\\d{4})-(\\d{2})-(\\d{2})/.exec('2024-01-15');
+match[0];  // '2024-01-15' (full match)
+match[1];  // '2024' (year)
+match[2];  // '01' (month)
+match[3];  // '15' (day)
+
+// Non-capturing groups
+/(?:https?:\\/\\/)?(www\\.)?example\\.com/
+
+// Named groups
+const dateRegex = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/;
+const result = dateRegex.exec('2024-01-15');
+result.groups.year;   // '2024'
+result.groups.month;  // '01'
+
+// Alternation (OR)
+/cat|dog/.test('I have a cat');  // true
+/(cat|dog)s?/.test('dogs');      // true</pre>
+      </div>
+
+      <h3>Common Methods</h3>
+      <div class="code-block">
+        <pre>const text = 'The quick brown fox';
+
+// test() - returns boolean
+/quick/.test(text);  // true
+
+// exec() - returns match array or null
+/quick/.exec(text);  // ['quick', index: 4, ...]
+
+// match() - string method
+text.match(/quick/);     // ['quick']
+text.match(/o/g);        // ['o', 'o'] with global flag
+
+// matchAll() - iterate all matches
+for (const match of text.matchAll(/o/g)) {
+  console.log(match.index);  // 12, 17
+}
+
+// search() - returns index
+text.search(/quick/);  // 4
+
+// replace() - replace matches
+text.replace(/quick/, 'slow');  // 'The slow brown fox'
+text.replace(/o/g, '0');        // 'The quick br0wn f0x'
+
+// replaceAll() - replace all (ES2021)
+text.replaceAll('o', '0');
+
+// split() - split by pattern
+'a,b;c|d'.split(/[,;|]/);  // ['a', 'b', 'c', 'd']</pre>
+      </div>
+
+      <h3>Practical Examples</h3>
+      <div class="code-block">
+        <pre>// Email validation
+const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+emailRegex.test('user@example.com');  // true
+
+// Phone number
+const phoneRegex = /^\\+?\\d{1,3}[-.\\s]?\\d{3}[-.\\s]?\\d{3}[-.\\s]?\\d{4}$/;
+
+// URL validation
+const urlRegex = /^https?:\\/\\/[\\w.-]+(?:\\.[\\w.-]+)+[\\w\\-._~:/?#[\\]@!$&'()*+,;=]*$/;
+
+// Password strength
+const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$/;
+
+// Extract hashtags
+const text = 'Hello #world #javascript';
+text.match(/#\\w+/g);  // ['#world', '#javascript']
+
+// Format phone number
+const formatPhone = (phone) => {
+  return phone.replace(/(\\d{3})(\\d{3})(\\d{4})/, '($1) $2-$3');
+};
+formatPhone('1234567890');  // '(123) 456-7890'</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "35-1",
+        type: "mcq",
+        question: "What does the 'g' flag do in a regular expression?",
+        options: [
+          "Makes it case-insensitive",
+          "Finds all matches instead of stopping at first",
+          "Enables multiline mode",
+          "Makes it greedy"
+        ],
+        correctAnswer: "Finds all matches instead of stopping at first",
+        explanation: "The 'g' (global) flag finds all matches in the string instead of stopping at the first match. Without it, methods like match() only return the first match."
+      },
+      {
+        id: "35-2",
+        type: "mcq",
+        question: "What does \\b match in a regular expression?",
+        options: [
+          "A backspace character",
+          "A blank space",
+          "A word boundary (between word and non-word characters)",
+          "The beginning of a string"
+        ],
+        correctAnswer: "A word boundary (between word and non-word characters)",
+        explanation: "\\b matches the position between a word character (\\w) and a non-word character. It's useful for matching whole words: /\\bcat\\b/ matches 'cat' but not 'category'."
+      },
+      {
+        id: "35-3",
+        type: "descriptive",
+        question: "Explain the difference between greedy and lazy quantifiers with an example.",
+        keywords: ["greedy", "lazy", "quantifier", "*", "+", "?", "match", "most", "least"],
+        explanation: "Greedy quantifiers (*, +, ?) match as much as possible. Lazy quantifiers (*?, +?, ??) match as little as possible. For '<b>bold</b>' with /<b>.*<\\/b>/, greedy matches the whole string, lazy (/<b>.*?<\\/b>/) matches just '<b>bold</b>'."
+      }
+    ]
+  },
+  {
+    id: 36,
+    title: "Date & Time Handling",
+    description: "Work with dates, times, and formatting in JavaScript",
+    duration: "40 min",
+    difficulty: "Intermediate",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>Date & Time Handling</h2>
+      <p>JavaScript's Date object handles dates and times. Understanding it is essential for any web application.</p>
+
+      <h3>Creating Dates</h3>
+      <div class="code-block">
+        <pre>// Current date/time
+const now = new Date();
+
+// From string
+new Date('2024-01-15');
+new Date('2024-01-15T10:30:00');
+new Date('January 15, 2024');
+
+// From components (month is 0-indexed!)
+new Date(2024, 0, 15);           // Jan 15, 2024
+new Date(2024, 0, 15, 10, 30, 0); // With time
+
+// From timestamp (ms since Jan 1, 1970)
+new Date(1705312200000);
+
+// Current timestamp
+Date.now();  // 1705312200000</pre>
+      </div>
+
+      <h3>Getting Date Components</h3>
+      <div class="code-block">
+        <pre>const date = new Date('2024-01-15T10:30:45');
+
+date.getFullYear();    // 2024
+date.getMonth();       // 0 (January, 0-indexed!)
+date.getDate();        // 15 (day of month)
+date.getDay();         // 1 (Monday, 0=Sunday)
+date.getHours();       // 10
+date.getMinutes();     // 30
+date.getSeconds();     // 45
+date.getMilliseconds(); // 0
+date.getTime();        // Timestamp in ms
+
+// UTC versions
+date.getUTCFullYear();
+date.getUTCMonth();
+// etc.</pre>
+      </div>
+
+      <h3>Setting Date Components</h3>
+      <div class="code-block">
+        <pre>const date = new Date();
+
+date.setFullYear(2025);
+date.setMonth(11);      // December
+date.setDate(25);
+date.setHours(12);
+date.setMinutes(0);
+date.setSeconds(0);
+
+// Chain modifications
+date.setFullYear(2024);
+date.setMonth(0);
+date.setDate(1);
+
+// Automatic overflow handling
+const d = new Date(2024, 0, 31);
+d.setMonth(1);  // Feb 31 -> becomes March 2 or 3</pre>
+      </div>
+
+      <h3>Formatting Dates</h3>
+      <div class="code-block">
+        <pre>const date = new Date('2024-01-15T10:30:00');
+
+// Built-in methods
+date.toString();        // 'Mon Jan 15 2024 10:30:00 GMT+0000'
+date.toDateString();    // 'Mon Jan 15 2024'
+date.toTimeString();    // '10:30:00 GMT+0000'
+date.toISOString();     // '2024-01-15T10:30:00.000Z'
+date.toLocaleDateString(); // '1/15/2024' (varies by locale)
+date.toLocaleTimeString(); // '10:30:00 AM'
+date.toLocaleString();     // '1/15/2024, 10:30:00 AM'
+
+// Intl.DateTimeFormat (recommended)
+const formatter = new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+formatter.format(date);  // 'Monday, January 15, 2024'
+
+// Different locales
+new Intl.DateTimeFormat('de-DE').format(date);  // '15.1.2024'
+new Intl.DateTimeFormat('ja-JP').format(date);  // '2024/1/15'
+
+// Custom format function
+function formatDate(date) {
+  const pad = n => n.toString().padStart(2, '0');
+  return \\\`\\\${date.getFullYear()}-\\\${pad(date.getMonth() + 1)}-\\\${pad(date.getDate())}\\\`;
+}
+formatDate(new Date());  // '2024-01-15'</pre>
+      </div>
+
+      <h3>Date Calculations</h3>
+      <div class="code-block">
+        <pre>// Add/subtract days
+function addDays(date, days) {
+  const result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+
+addDays(new Date(), 7);   // 1 week from now
+addDays(new Date(), -30); // 30 days ago
+
+// Difference between dates
+function daysBetween(date1, date2) {
+  const msPerDay = 24 * 60 * 60 * 1000;
+  return Math.round((date2 - date1) / msPerDay);
+}
+
+daysBetween(
+  new Date('2024-01-01'),
+  new Date('2024-01-15')
+);  // 14
+
+// Start/end of day
+function startOfDay(date) {
+  const d = new Date(date);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+function endOfDay(date) {
+  const d = new Date(date);
+  d.setHours(23, 59, 59, 999);
+  return d;
+}
+
+// Relative time
+function timeAgo(date) {
+  const seconds = Math.floor((new Date() - date) / 1000);
+
+  const intervals = {
+    year: 31536000,
+    month: 2592000,
+    week: 604800,
+    day: 86400,
+    hour: 3600,
+    minute: 60
+  };
+
+  for (const [unit, secondsInUnit] of Object.entries(intervals)) {
+    const interval = Math.floor(seconds / secondsInUnit);
+    if (interval >= 1) {
+      return \\\`\\\${interval} \\\${unit}\\\${interval > 1 ? 's' : ''} ago\\\`;
+    }
+  }
+  return 'just now';
+}</pre>
+      </div>
+
+      <h3>Timezone Handling</h3>
+      <div class="code-block">
+        <pre>// Get timezone offset (minutes from UTC)
+new Date().getTimezoneOffset();  // -300 for EST (UTC-5)
+
+// Format in specific timezone
+const date = new Date();
+date.toLocaleString('en-US', { timeZone: 'America/New_York' });
+date.toLocaleString('en-US', { timeZone: 'Europe/London' });
+date.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' });
+
+// Get timezone name
+Intl.DateTimeFormat().resolvedOptions().timeZone;  // 'America/New_York'</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "36-1",
+        type: "mcq",
+        question: "What value does getMonth() return for January?",
+        options: ["1", "0", "'January'", "'Jan'"],
+        correctAnswer: "0",
+        explanation: "JavaScript months are 0-indexed: January is 0, February is 1, etc. This is a common source of bugs. Remember to add 1 when displaying and subtract 1 when creating dates."
+      },
+      {
+        id: "36-2",
+        type: "mcq",
+        question: "What method returns a standardized date string format suitable for APIs?",
+        options: ["toString()", "toDateString()", "toISOString()", "toLocaleString()"],
+        correctAnswer: "toISOString()",
+        explanation: "toISOString() returns the date in ISO 8601 format (e.g., '2024-01-15T10:30:00.000Z'). This is the standard format for APIs and databases as it's unambiguous and sortable."
+      },
+      {
+        id: "36-3",
+        type: "descriptive",
+        question: "How would you format a date for display based on the user's locale? Give an example.",
+        keywords: ["Intl", "DateTimeFormat", "locale", "toLocaleString", "format", "international"],
+        explanation: "Use Intl.DateTimeFormat for locale-aware formatting. Example: new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date) returns 'January 15, 2024'. This automatically handles different date formats for different countries."
+      }
+    ]
+  },
+  {
+    id: 37,
+    title: "JavaScript Design Patterns",
+    description: "Learn common design patterns for writing maintainable JavaScript code",
+    duration: "50 min",
+    difficulty: "Advanced",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>JavaScript Design Patterns</h2>
+      <p>Design patterns are reusable solutions to common programming problems. They help write maintainable, scalable code.</p>
+
+      <h3>Module Pattern</h3>
+      <div class="code-block">
+        <pre>// Encapsulates private state and exposes public API
+const Calculator = (function() {
+  // Private
+  let result = 0;
+
+  function validate(n) {
+    if (typeof n !== 'number') throw new Error('Invalid input');
+  }
+
+  // Public API
+  return {
+    add(n) {
+      validate(n);
+      result += n;
+      return this;
+    },
+    subtract(n) {
+      validate(n);
+      result -= n;
+      return this;
+    },
+    getResult() {
+      return result;
+    },
+    reset() {
+      result = 0;
+      return this;
+    }
+  };
+})();
+
+Calculator.add(5).add(3).subtract(2).getResult();  // 6</pre>
+      </div>
+
+      <h3>Singleton Pattern</h3>
+      <div class="code-block">
+        <pre>// Ensures only one instance exists
+class Database {
+  static instance = null;
+
+  constructor() {
+    if (Database.instance) {
+      return Database.instance;
+    }
+    this.connection = this.connect();
+    Database.instance = this;
+  }
+
+  connect() {
+    console.log('Connecting to database...');
+    return { connected: true };
+  }
+
+  query(sql) {
+    return \\\`Executing: \\\${sql}\\\`;
+  }
+}
+
+const db1 = new Database();
+const db2 = new Database();
+console.log(db1 === db2);  // true - same instance
+
+// ES Module singleton (simpler)
+// database.js
+class Database { ... }
+export default new Database();  // Single instance exported</pre>
+      </div>
+
+      <h3>Observer Pattern</h3>
+      <div class="code-block">
+        <pre>class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+
+  on(event, callback) {
+    if (!this.events[event]) {
+      this.events[event] = [];
+    }
+    this.events[event].push(callback);
+    return () => this.off(event, callback);  // Return unsubscribe function
+  }
+
+  off(event, callback) {
+    if (!this.events[event]) return;
+    this.events[event] = this.events[event].filter(cb => cb !== callback);
+  }
+
+  emit(event, data) {
+    if (!this.events[event]) return;
+    this.events[event].forEach(callback => callback(data));
+  }
+
+  once(event, callback) {
+    const unsubscribe = this.on(event, (data) => {
+      callback(data);
+      unsubscribe();
+    });
+  }
+}
+
+// Usage
+const emitter = new EventEmitter();
+
+const unsubscribe = emitter.on('userLoggedIn', (user) => {
+  console.log('User logged in:', user.name);
+});
+
+emitter.emit('userLoggedIn', { name: 'Alice' });
+unsubscribe();  // Remove listener</pre>
+      </div>
+
+      <h3>Factory Pattern</h3>
+      <div class="code-block">
+        <pre>// Creates objects without specifying exact class
+class UserFactory {
+  static createUser(type, data) {
+    switch (type) {
+      case 'admin':
+        return new AdminUser(data);
+      case 'customer':
+        return new CustomerUser(data);
+      case 'guest':
+        return new GuestUser(data);
+      default:
+        throw new Error('Unknown user type');
+    }
+  }
+}
+
+class AdminUser {
+  constructor({ name, permissions }) {
+    this.name = name;
+    this.permissions = permissions || ['read', 'write', 'delete'];
+    this.role = 'admin';
+  }
+}
+
+class CustomerUser {
+  constructor({ name, subscription }) {
+    this.name = name;
+    this.subscription = subscription || 'free';
+    this.role = 'customer';
+  }
+}
+
+// Usage
+const admin = UserFactory.createUser('admin', { name: 'Alice' });
+const customer = UserFactory.createUser('customer', { name: 'Bob' });</pre>
+      </div>
+
+      <h3>Decorator Pattern</h3>
+      <div class="code-block">
+        <pre>// Adds behavior to objects dynamically
+function withLogging(fn) {
+  return function(...args) {
+    console.log(\\\`Calling \\\${fn.name} with:\\\`, args);
+    const result = fn.apply(this, args);
+    console.log(\\\`Result:\\\`, result);
+    return result;
+  };
+}
+
+function withTiming(fn) {
+  return function(...args) {
+    const start = performance.now();
+    const result = fn.apply(this, args);
+    console.log(\\\`\\\${fn.name} took \\\${performance.now() - start}ms\\\`);
+    return result;
+  };
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+const enhancedAdd = withLogging(withTiming(add));
+enhancedAdd(2, 3);
+// Logs: Calling add with: [2, 3]
+// Logs: add took 0.1ms
+// Logs: Result: 5
+
+// Class decorator (conceptual - needs transpiler)
+function readonly(target, key, descriptor) {
+  descriptor.writable = false;
+  return descriptor;
+}</pre>
+      </div>
+
+      <h3>Strategy Pattern</h3>
+      <div class="code-block">
+        <pre>// Defines family of algorithms, encapsulates each one
+const shippingStrategies = {
+  standard: (weight) => weight * 2.5,
+  express: (weight) => weight * 5 + 10,
+  overnight: (weight) => weight * 10 + 25,
+};
+
+class ShippingCalculator {
+  constructor(strategy = 'standard') {
+    this.strategy = strategy;
+  }
+
+  setStrategy(strategy) {
+    this.strategy = strategy;
+  }
+
+  calculate(weight) {
+    return shippingStrategies[this.strategy](weight);
+  }
+}
+
+const calculator = new ShippingCalculator();
+calculator.calculate(5);  // 12.5 (standard)
+
+calculator.setStrategy('express');
+calculator.calculate(5);  // 35 (express)
+
+// Validation strategies
+const validators = {
+  required: (value) => value !== '' || 'Field is required',
+  email: (value) => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value) || 'Invalid email',
+  minLength: (min) => (value) => value.length >= min || \\\`Minimum \\\${min} characters\\\`,
+};
+
+function validate(value, rules) {
+  return rules.map(rule => rule(value)).filter(r => r !== true);
+}</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "37-1",
+        type: "mcq",
+        question: "What is the main purpose of the Singleton pattern?",
+        options: [
+          "To create multiple instances quickly",
+          "To ensure only one instance of a class exists",
+          "To hide implementation details",
+          "To add functionality to objects"
+        ],
+        correctAnswer: "To ensure only one instance of a class exists",
+        explanation: "Singleton ensures a class has only one instance and provides global access to it. Common uses include database connections, configuration objects, and logging services."
+      },
+      {
+        id: "37-2",
+        type: "mcq",
+        question: "Which pattern is best for adding functionality to existing objects without modifying them?",
+        options: ["Factory", "Singleton", "Decorator", "Observer"],
+        correctAnswer: "Decorator",
+        explanation: "The Decorator pattern wraps objects to add new behavior dynamically. It follows the open/closed principle - open for extension, closed for modification."
+      },
+      {
+        id: "37-3",
+        type: "descriptive",
+        question: "Explain the Observer pattern and give an example of when you would use it.",
+        keywords: ["observer", "subscribe", "publish", "event", "notify", "listener", "decouple"],
+        explanation: "Observer allows objects to subscribe to events and be notified when they occur. Use it for: event systems, real-time updates, UI state changes. Example: A shopping cart that notifies the UI when items are added, without the cart knowing about the UI."
+      }
+    ]
+  },
+  {
+    id: 38,
+    title: "JavaScript Performance & Best Practices",
+    description: "Optimize JavaScript code for speed and maintainability",
+    duration: "45 min",
+    difficulty: "Advanced",
+    month: 2,
+    week: 4,
+    category: "JavaScript",
+    content: `
+      <h2>JavaScript Performance & Best Practices</h2>
+      <p>Writing performant, maintainable JavaScript is crucial for professional development.</p>
+
+      <h3>Performance Optimization</h3>
+      <div class="code-block">
+        <pre>// 1. Avoid unnecessary DOM queries
+// Bad
+for (let i = 0; i < 1000; i++) {
+  document.getElementById('list').innerHTML += '<li>' + i + '</li>';
+}
+
+// Good - query once, batch updates
+const list = document.getElementById('list');
+const fragment = document.createDocumentFragment();
+for (let i = 0; i < 1000; i++) {
+  const li = document.createElement('li');
+  li.textContent = i;
+  fragment.appendChild(li);
+}
+list.appendChild(fragment);
+
+// 2. Debounce expensive operations
+function debounce(fn, delay) {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+const handleSearch = debounce((query) => {
+  fetchResults(query);
+}, 300);
+
+input.addEventListener('input', (e) => handleSearch(e.target.value));
+
+// 3. Throttle scroll/resize handlers
+function throttle(fn, limit) {
+  let inThrottle;
+  return function(...args) {
+    if (!inThrottle) {
+      fn.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+
+window.addEventListener('scroll', throttle(handleScroll, 100));</pre>
+      </div>
+
+      <h3>Memory Management</h3>
+      <div class="code-block">
+        <pre>// 1. Remove event listeners when done
+class Component {
+  constructor(element) {
+    this.element = element;
+    this.handleClick = this.handleClick.bind(this);
+    this.element.addEventListener('click', this.handleClick);
+  }
+
+  destroy() {
+    this.element.removeEventListener('click', this.handleClick);
+    this.element = null;
+  }
+
+  handleClick() { ... }
+}
+
+// 2. Clear intervals and timeouts
+class Timer {
+  start() {
+    this.intervalId = setInterval(() => this.tick(), 1000);
+  }
+
+  stop() {
+    clearInterval(this.intervalId);
+  }
+}
+
+// 3. Use WeakMap for object metadata (auto garbage collected)
+const metadata = new WeakMap();
+
+function addMetadata(obj, data) {
+  metadata.set(obj, data);
+}
+
+// When obj is garbage collected, metadata is too
+
+// 4. Avoid closures holding large objects
+// Bad
+function processData(largeData) {
+  return function() {
+    // largeData stays in memory forever!
+    return largeData.length;
+  };
+}
+
+// Good
+function processData(largeData) {
+  const length = largeData.length;
+  return function() {
+    return length;
+  };
+}</pre>
+      </div>
+
+      <h3>Code Quality Best Practices</h3>
+      <div class="code-block">
+        <pre>// 1. Use const by default, let when needed
+const PI = 3.14159;
+let count = 0;
+
+// 2. Use meaningful names
+// Bad
+const x = users.filter(u => u.a > 18);
+
+// Good
+const adultUsers = users.filter(user => user.age > 18);
+
+// 3. Keep functions small and focused
+// Bad
+function processUser(user) {
+  // 100 lines doing many things
+}
+
+// Good
+function processUser(user) {
+  validateUser(user);
+  const normalizedUser = normalizeUserData(user);
+  saveUser(normalizedUser);
+  sendWelcomeEmail(normalizedUser);
+}
+
+// 4. Use early returns
+// Bad
+function getDiscount(user) {
+  if (user) {
+    if (user.isPremium) {
+      if (user.yearsActive > 5) {
+        return 0.3;
+      } else {
+        return 0.2;
+      }
+    } else {
+      return 0.1;
+    }
+  } else {
+    return 0;
+  }
+}
+
+// Good
+function getDiscount(user) {
+  if (!user) return 0;
+  if (!user.isPremium) return 0.1;
+  if (user.yearsActive > 5) return 0.3;
+  return 0.2;
+}
+
+// 5. Use object destructuring
+// Bad
+function createUser(options) {
+  const name = options.name;
+  const email = options.email;
+  const age = options.age || 0;
+}
+
+// Good
+function createUser({ name, email, age = 0 }) {
+  // Use directly
+}</pre>
+      </div>
+
+      <h3>Error Handling Best Practices</h3>
+      <div class="code-block">
+        <pre>// 1. Always handle promise rejections
+async function fetchData() {
+  try {
+    const response = await fetch('/api/data');
+    if (!response.ok) {
+      throw new Error(\\\`HTTP error: \\\${response.status}\\\`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Fetch failed:', error);
+    throw error;  // Re-throw or handle appropriately
+  }
+}
+
+// 2. Create custom error classes
+class ValidationError extends Error {
+  constructor(field, message) {
+    super(message);
+    this.name = 'ValidationError';
+    this.field = field;
+  }
+}
+
+// 3. Fail fast with assertions
+function processOrder(order) {
+  if (!order) throw new Error('Order is required');
+  if (!order.items?.length) throw new Error('Order must have items');
+  // Continue with valid order
+}
+
+// 4. Global error handling
+window.addEventListener('error', (event) => {
+  logError(event.error);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  logError(event.reason);
+});</pre>
+      </div>
+
+      <h3>Security Best Practices</h3>
+      <div class="code-block">
+        <pre>// 1. Never use eval() or new Function() with user input
+// Bad
+eval(userInput);
+
+// 2. Sanitize HTML
+function sanitizeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Use textContent instead of innerHTML when possible
+element.textContent = userInput;  // Safe
+element.innerHTML = userInput;    // XSS risk!
+
+// 3. Validate and sanitize all user input
+function validateEmail(email) {
+  const pattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+  return pattern.test(email);
+}
+
+// 4. Use Content Security Policy headers (server-side)
+// 5. Use HTTPS for all requests
+// 6. Store sensitive data in httpOnly cookies, not localStorage</pre>
+      </div>
+    `,
+    questions: [
+      {
+        id: "38-1",
+        type: "mcq",
+        question: "What is the difference between debounce and throttle?",
+        options: [
+          "They're the same thing",
+          "Debounce waits for pause in calls, throttle limits call frequency",
+          "Throttle waits for pause, debounce limits frequency",
+          "Debounce is for clicks, throttle is for scrolling"
+        ],
+        correctAnswer: "Debounce waits for pause in calls, throttle limits call frequency",
+        explanation: "Debounce waits until calls stop for a period before executing (good for search input). Throttle ensures function runs at most once per time period (good for scroll handlers)."
+      },
+      {
+        id: "38-2",
+        type: "mcq",
+        question: "Why should you use textContent instead of innerHTML for user input?",
+        options: [
+          "It's faster",
+          "It prevents XSS attacks by not parsing HTML",
+          "It looks better",
+          "innerHTML is deprecated"
+        ],
+        correctAnswer: "It prevents XSS attacks by not parsing HTML",
+        explanation: "textContent treats content as plain text, not HTML. If user input contains <script> tags, textContent displays them as text. innerHTML would execute them, allowing XSS attacks."
+      },
+      {
+        id: "38-3",
+        type: "descriptive",
+        question: "Explain three ways to improve JavaScript performance when manipulating the DOM.",
+        keywords: ["DOM", "batch", "fragment", "query", "cache", "reflow", "repaint", "virtual"],
+        explanation: "1) Cache DOM queries - store element references instead of querying repeatedly. 2) Batch updates - use DocumentFragment or build HTML strings before inserting. 3) Minimize reflows - change classes instead of individual styles, read layout properties together."
       }
     ]
   }

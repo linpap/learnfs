@@ -107,7 +107,7 @@ export default function Home() {
               <div className="text-sm text-gray-500">Hours</div>
             </div>
             <div className="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow">
-              <div className="text-3xl font-bold text-orange-600">150+</div>
+              <div className="text-3xl font-bold text-orange-600">400+</div>
               <div className="text-sm text-gray-500">Exercises</div>
             </div>
           </div>
