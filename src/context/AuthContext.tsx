@@ -8,6 +8,7 @@ interface AuthContextType {
   user: User | null
   loading: boolean
   isPremium: boolean
+  isAdmin: boolean
   checkPremiumStatus: () => Promise<boolean>
   signIn: (email: string, password: string) => Promise<{ error: AuthError | null }>
   signUp: (email: string, password: string) => Promise<{ error: AuthError | null }>
@@ -15,16 +16,40 @@ interface AuthContextType {
   signOut: () => Promise<void>
 }
 
+// Admin and premium users (hardcoded for specific access)
+const ADMIN_EMAILS = ['linpap@gmail.com']
+const PREMIUM_EMAILS = ['linpap@gmail.com', 'sayanmallikcsc@gmail.com']
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
   const [isPremium, setIsPremium] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
   const supabase = useMemo(() => createClient(), [])
 
   const checkPremiumStatus = useCallback(async (): Promise<boolean> => {
-    if (!supabase || !user) {
+    if (!user) {
+      setIsPremium(false)
+      setIsAdmin(false)
+      return false
+    }
+
+    const userEmail = user.email?.toLowerCase() || ''
+
+    // Check if user is admin
+    const admin = ADMIN_EMAILS.includes(userEmail)
+    setIsAdmin(admin)
+
+    // Check if user has hardcoded premium access
+    if (PREMIUM_EMAILS.includes(userEmail)) {
+      setIsPremium(true)
+      return true
+    }
+
+    // Check database for premium status
+    if (!supabase) {
       setIsPremium(false)
       return false
     }
@@ -126,9 +151,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           await migrateLocalProgress(session.user.id)
         }
 
-        // Reset premium status on sign out
+        // Reset premium and admin status on sign out
         if (event === 'SIGNED_OUT') {
           setIsPremium(false)
+          setIsAdmin(false)
         }
       }
     )
@@ -153,6 +179,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       email,
       password,
     })
+    if (!error) {
+      // Revoke all other sessions (fire-and-forget)
+      fetch('/api/auth/enforce-single-session', { method: 'POST' }).catch(console.error)
+    }
     return { error }
   }
 
@@ -183,7 +213,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, isPremium, checkPremiumStatus, signIn, signUp, signInWithGoogle, signOut }}>
+    <AuthContext.Provider value={{ user, loading, isPremium, isAdmin, checkPremiumStatus, signIn, signUp, signInWithGoogle, signOut }}>
       {children}
     </AuthContext.Provider>
   )
