@@ -4,6 +4,9 @@ import { NextResponse, type NextRequest } from 'next/server'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
+// Admin users who can access /admin routes
+const ADMIN_EMAILS = ['linpap@gmail.com']
+
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
     request,
@@ -39,6 +42,22 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const url = request.nextUrl
+
+  // Protected routes: Admin area requires authentication + admin email
+  if (url.pathname.startsWith('/admin')) {
+    if (!user) {
+      const loginUrl = new URL('/auth/login', request.url)
+      loginUrl.searchParams.set('redirect', url.pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+
+    // Check if user is admin
+    const userEmail = user.email?.toLowerCase() || ''
+    if (!ADMIN_EMAILS.includes(userEmail)) {
+      // Redirect non-admin users to home
+      return NextResponse.redirect(new URL('/', request.url))
+    }
+  }
 
   // Protected routes: Practice area requires authentication
   if (url.pathname.startsWith('/practice')) {
