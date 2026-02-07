@@ -16,6 +16,7 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
 
   const redirect = searchParams.get('redirect') || '/dashboard';
+  const justRegistered = searchParams.get('registered') === 'true';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,6 +43,12 @@ function LoginForm() {
         <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
           Sign in to continue your learning journey
         </p>
+
+        {justRegistered && (
+          <div className="mb-4 p-3 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-lg text-sm">
+            Account created successfully! Please sign in.
+          </div>
+        )}
 
         {error && (
           <div className="mb-4 p-3 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-lg text-sm">

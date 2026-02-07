@@ -6,29 +6,6 @@ import Link from 'next/link';
 import Logo from '@/components/Logo';
 import { useAuth } from '@/context/AuthContext';
 
-function SuccessMessage({ email }: { email: string }) {
-  return (
-    <div className="w-full max-w-md text-center">
-      <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
-        <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-        </svg>
-      </div>
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-        Check Your Email
-      </h1>
-      <p className="text-gray-600 dark:text-gray-400 mb-8">
-        We&apos;ve sent a confirmation link to <strong>{email}</strong>. Click the link to verify your account.
-      </p>
-      <Link
-        href="/auth/login"
-        className="text-blue-600 hover:text-blue-700 font-medium"
-      >
-        Back to Login
-      </Link>
-    </div>
-  );
-}
 
 function RegisterForm() {
   const router = useRouter();
@@ -39,7 +16,6 @@ function RegisterForm() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const redirect = searchParams.get('redirect') || '/dashboard';
 
@@ -61,7 +37,8 @@ function RegisterForm() {
 
     try {
       await signUp(email, password);
-      setSuccess(true);
+      // Redirect to login page with success message
+      router.push('/auth/login?registered=true');
     } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to create account';
       setError(errorMessage);
@@ -69,10 +46,6 @@ function RegisterForm() {
       setLoading(false);
     }
   };
-
-  if (success) {
-    return <SuccessMessage email={email} />;
-  }
 
   return (
     <div className="w-full max-w-md">
