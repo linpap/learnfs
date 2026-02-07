@@ -8,6 +8,8 @@ import { useAuth } from '@/context/AuthContext';
 export default function PremiumPage() {
   const { user, isPremium } = useAuth();
   const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'yearly'>('yearly');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const plans = {
     monthly: {
@@ -237,18 +239,45 @@ export default function PremiumPage() {
                 </li>
               </ul>
               <button
-                onClick={() => {
+                onClick={async () => {
                   if (!user) {
                     window.location.href = '/auth/register?redirect=premium';
-                  } else {
-                    // In production, this would open Stripe checkout
-                    alert('Payment integration coming soon!');
+                    return;
+                  }
+
+                  setIsLoading(true);
+                  setError(null);
+
+                  try {
+                    const response = await fetch('/api/payments/create', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ plan_type: selectedPlan }),
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success && data.payment_url) {
+                      window.location.href = data.payment_url;
+                    } else {
+                      setError(data.error || 'Failed to create payment. Please try again.');
+                    }
+                  } catch {
+                    setError('Something went wrong. Please try again.');
+                  } finally {
+                    setIsLoading(false);
                   }
                 }}
-                className="w-full py-4 bg-gradient-to-r from-emerald-500 to-blue-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-blue-700 transition-all"
+                disabled={isLoading}
+                className="w-full py-4 bg-gradient-to-r from-emerald-500 to-blue-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {user ? 'Upgrade Now' : 'Get Started'}
+                {isLoading ? 'Processing...' : user ? 'Upgrade Now' : 'Get Started'}
               </button>
+              {error && (
+                <p className="text-center text-sm text-red-500 mt-2">
+                  {error}
+                </p>
+              )}
               <p className="text-center text-sm text-gray-500 mt-4">
                 30-day money-back guarantee
               </p>
